@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h3>SummAInize</h3>
+
+<details id="settings">
+  <summary>Settings (API key)</summary>
+  <div class="row"><input id="key" type="password" placeholder="Gemini API key" style="flex:1"></div>
+  <div class="row"><input id="model" placeholder="Model ID" style="flex:1" value="gemini-3.5-flash-lite"></div>
+  <!-- <div class="row"><input id="model2" placeholder="Backup model ID" style="flex:1"></div> -->
+  <div class="row"><button id="savekey" class="alt" style="width:100%">Save settings</button></div> 
+</details>
+
+<div class="row">
+  <select id="mode" style="flex:1">
+    <option value="ai">AI summary (small)</option>
+    <option value="trim">Trim only (no API)</option>
+  </select>
+</div>
+
+<textarea id="out" readonly placeholder="Click Regenerate to start ..!" style="background:#F3E5F5"></textarea>
+
+<div class="row">
+  <button id="copy" style="flex:1">Copy</button>
+  <button id="regen" style="flex:1">Regenerate</button>
+  <button id="clear" style="flex:1; background:#9C27B0;">Clear</button>
+</div>
+
+<div id="s"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
